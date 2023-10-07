@@ -1,5 +1,5 @@
 import 'package:awesome_bottom_bar/awesome_bottom_bar.dart';
-import 'package:farm2door/screen/nav_bar/cart_page.dart';
+import 'package:farm2door/screen/nav_bar/cart/cart_page.dart';
 import 'package:farm2door/screen/nav_bar/home_page.dart';
 import 'package:farm2door/screen/nav_bar/message_page.dart';
 import 'package:farm2door/screen/nav_bar/order_page.dart';

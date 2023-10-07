@@ -1,3 +1,4 @@
+import 'package:farm2door/screen/product_deatils_screen.dart';
 import 'package:farm2door/widget/custom_mystyle.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
@@ -22,6 +23,22 @@ class _HomePageState extends State<HomePage> {
     "assets/images/Vegitable.png",
   ];
 
+  List<String> mangoImages= [
+    "assets/images/mango.png",
+    "assets/images/product1.png"
+  ];
+  List<String> mangoImageTitle = [
+    "Langra Mango (ল্যাংড়া আম)",
+    "Langra Mango (ল্যাংড়া আম)",
+  ];
+   List<String> mangoImageRating = [
+    "4.5 (1101)   2.0K Sold",
+    "4.5 (1101)   2.0K Sold",
+  ];
+  List<String> mangoPrice = [
+    "\৳ 620/-",
+    "\৳ 620/-",
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -224,10 +241,9 @@ class _HomePageState extends State<HomePage> {
                   //             alignment: AlignmentDirectional(-1.00, 0.00),
                   //             child: Text(
                   //               'Langra Mango (ল্যাংড়া আম)',
-                  //               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                  //                 fontFamily: 'Readex Pro',
-                  //                 fontSize: 12,
-                  //                 fontWeight: FontWeight.bold,
+                  //               style: CustomMyStyle(
+                                  
+                  //                  12.0,Colors.black,FontWeight.bold,
                   //               ),
                   //             ),
                   //           ),
@@ -249,9 +265,9 @@ class _HomePageState extends State<HomePage> {
                   //                   padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
                   //                   child: Text(
                   //                     '4.5 (1101)   2.0K Sold',
-                  //                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                  //                       fontFamily: 'Poppins',
-                  //                       fontSize: 10,
+                  //                     style: CustomMyStyle(
+                                       
+                  //                      10, Colors.black, FontWeight.normal
                   //                     ),
                   //                   ),
                   //                 ),
@@ -262,9 +278,10 @@ class _HomePageState extends State<HomePage> {
                   //             alignment: AlignmentDirectional(-1.00, 0.00),
                   //             child: Text(
                   //               'By Weight (min 5 kg)',
-                  //               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                  //                 fontFamily: 'Poppins',
-                  //                 fontSize: 10,
+                  //               style: CustomMyStyle(
+                                  
+                  //                  10, Color(0xff7D7D7D), FontWeight.normal,
+
                   //               ),
                   //             ),
                   //           ),
@@ -276,7 +293,7 @@ class _HomePageState extends State<HomePage> {
                   //                 alignment: AlignmentDirectional(-1.00, 0.00),
                   //                 child: Text(
                   //                   '৳ 620/-',
-                  //                   style: FlutterFlowTheme.of(context).bodyMedium,
+                  //                   // style: FlutterFlowTheme.of(context).bodyMedium,
                   //                 ),
                   //               ),
                   //               ClipRRect(
@@ -290,77 +307,169 @@ class _HomePageState extends State<HomePage> {
                   //               ),
                   //             ],
                   //           ),
-                  //         ].divide(SizedBox(height: 10)),
+                  //           // Divider(SizedBox(height: 10)),
+                  //         ]
                   //       ),
                   //     ),
                   //   ],
-                  // )
-                  Column(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(8),
-                        child: Image.asset(
-                          'assets/images/product1.png',
-                          width: 170,
-                          height: 100,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      const Padding(
-                          padding: EdgeInsets.only(
-                              left: 15,
-                              right: 15,
-                              top: 10,
-                              bottom: 10), // Add padding for spacing
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Langra Mango (ল্যাংড়া আম)',
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              SizedBox(height: 4),
-                              Row(children: [
-                                Icon(
-                                  Icons.star,
-                                  color: Colors.amber,
-                                  size: 20,
-                                ),
-                                Text(
-                                  '4.5 (1101)   2.0K Sold',
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    color: Colors.grey,
-                                  ),
-                                ),
-                              ]),
-                              SizedBox(height: 10),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    '\৳ 620/-',
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                      color: Colors.green,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  Icon(Icons.add_shopping_cart)
-                                ],
-                              )
-                            ],
-                          ))
-                    ],
-                    // Adjust the height as needed
-                  ),
+                  // ),
+                  // Column(
+                  //   mainAxisSize: MainAxisSize.max,
+                  //   children: [
+                  //     ClipRRect(
+                  //       borderRadius: BorderRadius.circular(8),
+                  //       child: Image.asset(
+                  //         'assets/images/product1.png',
+                  //         width: 170,
+                  //         height: 100,
+                  //         fit: BoxFit.cover,
+                  //       ),
+                  //     ),
+                  //     const Padding(
+                  //         padding: EdgeInsets.only(
+                  //             left: 15,
+                  //             right: 15,
+                  //             top: 10,
+                  //             bottom: 10), // Add padding for spacing
+                  //         child: Column(
+                  //           crossAxisAlignment: CrossAxisAlignment.start,
+                  //           children: [
+                  //             Text(
+                  //               'Langra Mango (ল্যাংড়া আম)',
+                  //               style: TextStyle(
+                  //                 fontSize: 12,
+                  //                 fontWeight: FontWeight.bold,
+                  //               ),
+                  //             ),
+                  //             SizedBox(height: 4),
+                  //             Row(children: [
+                  //               Icon(
+                  //                 Icons.star,
+                  //                 color: Colors.amber,
+                  //                 size: 20,
+                  //               ),
+                  //               Text(
+                  //                 '4.5 (1101)   2.0K Sold',
+                  //                 style: TextStyle(
+                  //                   fontSize: 14,
+                  //                   color: Colors.grey,
+                  //                 ),
+                  //               ),
+                  //             ]),
+                  //             SizedBox(height: 10),
+                  //             Row(
+                  //               mainAxisAlignment:
+                  //                   MainAxisAlignment.spaceBetween,
+                  //               children: [
+                  //                 Text(
+                  //                   '\৳ 620/-',
+                  //                   style: TextStyle(
+                  //                     fontSize: 14,
+                  //                     color: Colors.green,
+                  //                     fontWeight: FontWeight.bold,
+                  //                   ),
+                  //                 ),
+                  //                 Icon(Icons.add_shopping_cart)
+                  //               ],
+                  //             )
+                  //           ],
+                  //         ))
+                  //   ],
+                  //   // Adjust the height as needed
+                  // ),
 
                   // Product Details
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * .4,
+                    width: double.infinity,
+                  
+                    child: ListView.builder(
+                      itemCount: mangoImages.length,
+                      itemBuilder: (_, index){
+                      return Padding(
+                        padding: const EdgeInsets.only(bottom: 10),
+                        child: InkWell(
+                          onTap: (){
+                            //write function or go to details screen
+                            Navigator.push(context, MaterialPageRoute(builder: (_)=> ProductDeatilsScreen()));
+                          },
+                          child: Container(
+                                               
+                            height: MediaQuery.of(context).size.height * .45,
+                            decoration: BoxDecoration(
+                                 color: Color(0xffEFFFF6),
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            width: double.infinity,
+                            child: Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(8),
+                              child: Image.asset(
+                                mangoImages[index],
+                                width: 170,
+                                height: 100,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                             Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 15,
+                                    right: 15,
+                                    top: 10,
+                                    bottom: 10), // Add padding for spacing
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      mangoImageTitle[index].toString(),
+                                      style: const TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    SizedBox(height: 4),
+                                    Row(children: [
+                                      Icon(
+                                        Icons.star,
+                                        color: Colors.amber,
+                                        size: 20,
+                                      ),
+                                      Text(
+                                        mangoImageRating[index],
+                                        style: TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.grey,
+                                        ),
+                                      ),
+                                    ]),
+                                    SizedBox(height: 10),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text(
+                                          mangoPrice[index],
+                                          style: TextStyle(
+                                            fontSize: 14,
+                                            color: Colors.green,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                        Icon(Icons.add_shopping_cart)
+                                      ],
+                                    )
+                                  ],
+                                ))
+                                              ],
+                                              // Adjust the height as needed
+                                            ),
+                          ),
+                        ),
+                      );
+                    }),
+                  )
                 ])))));
   }
 }
