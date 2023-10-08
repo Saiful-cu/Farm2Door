@@ -1,7 +1,8 @@
-import 'package:farm2door/screen/login.dart';
 import 'package:farm2door/widget/custom_fromfield.dart';
 import 'package:farm2door/widget/custom_mystyle.dart';
 import 'package:flutter/material.dart';
+
+import 'login.dart';
 
 class Register extends StatefulWidget {
   const Register({Key? key}) : super(key: key);

@@ -19,7 +19,7 @@ class _NavBarScreenState extends State<NavBarScreen> {
     title: 'Home',
   ),
   const TabItem(
-    icon: Icons.place_rounded,
+    icon: Icons.backup_table,
     title: 'Order',
   ),
   const TabItem(

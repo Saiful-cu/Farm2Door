@@ -1,7 +1,7 @@
 import 'dart:async';
-
-import 'package:farm2door/screen/login.dart';
+import 'login.dart';
 import 'package:flutter/material.dart';
+
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
